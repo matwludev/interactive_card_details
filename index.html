@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style/style.css" />
+		<title>Interactive Card Details</title>
+	</head>
+	<body>
+		<main>
+			<section class="card">
+				<div class="card__front">
+					<svg
+						width="84"
+						height="47"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+						<path
+							d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+							stroke="#fff"
+						/>
+					</svg>
+					<p class="card__front number"></p>
+					<div class="card__front data">
+						<p class="nameSurname"></p>
+						<p class="expiredDate"></p>
+					</div>
+				</div>
+				<div class="card__back">
+					<p class="card__back cvc"></p>
+				</div>
+			</section>
+			<section class="form">
+				<form>
+					<div class="cardDataWrapper">
+						<div class="cardOwner">
+							<label
+								>cardholder name<input id="cardholderName" type="text"
+							/></label>
+						</div>
+						<div class="cardNum">
+							<label>card number<input id="cardNumber" type="number" /></label>
+						</div>
+						<div class="cardDate">
+							<label
+								>exp. date (mm/yy)
+								<input id="expDateMM" type="number" />
+								<input id="expDateMM" type="number" />
+							</label>
+						</div>
+						<div class="cardCvc">
+							<label>cvc<input id="cvcNum" type="number" /></label>
+						</div>
+					</div>
+
+					<div class="cardDataThanks">
+						<svg
+							width="80"
+							height="80"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<circle cx="40" cy="40" r="40" fill="url(#a)" />
+							<path
+								d="M28 39.92 36.08 48l16-16"
+								stroke="#fff"
+								stroke-width="3"
+							/>
+							<defs>
+								<linearGradient
+									id="a"
+									x1="-23.014"
+									y1="11.507"
+									x2="0"
+									y2="91.507"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop stop-color="#6348FE" />
+									<stop offset="1" stop-color="#610595" />
+								</linearGradient>
+							</defs>
+						</svg>
+						<h2>thank you!</h2>
+						<p>we've added your card details</p>
+					</div>
+					<button type="submit">confirm</button>
+				</form>
+			</section>
+		</main>
+		<script src="./js/app.js"></script>
+	</body>
+</html>
