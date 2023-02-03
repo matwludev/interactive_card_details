@@ -34,7 +34,7 @@
 				</div>
 			</section>
 			<section class="form">
-				<form>
+				<form id="myForm" novalidate>
 					<div class="cardDataWrapper">
 						<div class="cardOwner">
 							<label
@@ -48,20 +48,37 @@
 							<label
 								>card number<input
 									id="cardNumber"
-									type="number"
+									type="text"
 									placeholder="e.g. 1234 5678 9123 0000"
 							/></label>
 						</div>
 						<div class="cardDate">
 							<label
 								>exp. date (mm/yy)
-								<input id="expDateMM" type="number" placeholder="MM" />
-								<input id="expDateYY" type="number" placeholder="YY" />
+								<input
+									id="expDateMM"
+									type="number"
+									placeholder="MM"
+									min="1"
+									max="12"
+								/>
+								<input
+									id="expDateYY"
+									type="number"
+									placeholder="YY"
+									min="0"
+									max="99"
+								/>
 							</label>
 						</div>
 						<div class="cardCvc">
 							<label
-								>cvc<input id="cvcNum" type="number" placeholder="e.g. 123"
+								>cvc<input
+									id="cvcNum"
+									type="number"
+									placeholder="e.g. 123"
+									min="0"
+									max="999"
 							/></label>
 						</div>
 					</div>
@@ -96,9 +113,7 @@
 						<h2>thank you!</h2>
 						<p>we've added your card details</p>
 					</div>
-					<button id="submitBtn" class="submitBtn" type="submit">
-						confirm
-					</button>
+					<button class="submitBtn" type="submit">confirm</button>
 				</form>
 			</section>
 		</main>
