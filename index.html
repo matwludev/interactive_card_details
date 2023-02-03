@@ -23,14 +23,14 @@
 							stroke="#fff"
 						/>
 					</svg>
-					<p class="card__front number"></p>
-					<div class="card__front data">
+					<p class="card__front-number"></p>
+					<div class="card__front-data">
 						<p class="nameSurname"></p>
-						<p class="expiredDate"></p>
+						<div><span class="dateMM"></span><span class="dateYY"></span></div>
 					</div>
 				</div>
 				<div class="card__back">
-					<p class="card__back cvc"></p>
+					<p class="card__back-cvc"></p>
 				</div>
 			</section>
 			<section class="form">
@@ -38,21 +38,31 @@
 					<div class="cardDataWrapper">
 						<div class="cardOwner">
 							<label
-								>cardholder name<input id="cardholderName" type="text"
+								>cardholder name<input
+									id="cardholderName"
+									type="text"
+									placeholder="e.g. Jane Appleseed"
 							/></label>
 						</div>
 						<div class="cardNum">
-							<label>card number<input id="cardNumber" type="number" /></label>
+							<label
+								>card number<input
+									id="cardNumber"
+									type="number"
+									placeholder="e.g. 1234 5678 9123 0000"
+							/></label>
 						</div>
 						<div class="cardDate">
 							<label
 								>exp. date (mm/yy)
-								<input id="expDateMM" type="number" />
-								<input id="expDateMM" type="number" />
+								<input id="expDateMM" type="number" placeholder="MM" />
+								<input id="expDateYY" type="number" placeholder="YY" />
 							</label>
 						</div>
 						<div class="cardCvc">
-							<label>cvc<input id="cvcNum" type="number" /></label>
+							<label
+								>cvc<input id="cvcNum" type="number" placeholder="e.g. 123"
+							/></label>
 						</div>
 					</div>
 
@@ -86,7 +96,9 @@
 						<h2>thank you!</h2>
 						<p>we've added your card details</p>
 					</div>
-					<button type="submit">confirm</button>
+					<button id="submitBtn" class="submitBtn" type="submit">
+						confirm
+					</button>
 				</form>
 			</section>
 		</main>
