@@ -10,4 +10,12 @@ html {
   font-family: "Space Grotesk", sans-serif;
 }
 
+.cardDataThanks {
+  display: none;
+}
+
+.error {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

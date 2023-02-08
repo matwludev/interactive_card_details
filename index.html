@@ -43,6 +43,7 @@
 									type="text"
 									placeholder="e.g. Jane Appleseed"
 							/></label>
+							<p class="error">Can't be blank</p>
 						</div>
 						<div class="cardNum">
 							<label
@@ -51,35 +52,24 @@
 									type="text"
 									placeholder="e.g. 1234 5678 9123 0000"
 							/></label>
+							<p class="error">Can't be blank</p>
+							<p class="error">Wrong format, numbers only</p>
+							<p class="error">Wrong format, not enough digits</p>
 						</div>
 						<div class="cardDate">
 							<label
 								>exp. date (mm/yy)
-								<input
-									id="expDateMM"
-									type="number"
-									placeholder="MM"
-									min="1"
-									max="12"
-								/>
-								<input
-									id="expDateYY"
-									type="number"
-									placeholder="YY"
-									min="0"
-									max="99"
-								/>
+								<input id="expDateMM" type="text" placeholder="MM" />
+								<input id="expDateYY" type="text" placeholder="YY" />
 							</label>
+							<p class="error">Can't be blank</p>
+							<p class="error">Wrong month number</p>
 						</div>
 						<div class="cardCvc">
 							<label
-								>cvc<input
-									id="cvcNum"
-									type="number"
-									placeholder="e.g. 123"
-									min="0"
-									max="999"
+								>cvc<input id="cvcNum" type="text" placeholder="e.g. 123"
 							/></label>
+							<p class="error">Can't be blank</p>
 						</div>
 					</div>
 
