@@ -31,40 +31,44 @@ inputs.forEach ( (e) => {
             console.log("Trafiłeś mnie, ale jestem pusty");
             cardNumber.textContent = "0000 0000 0000 0000";
         } else if (e == inputs[1]){
-            cardNumber.textContent = e.value;
-            if (cardNumber.textContent.length >= 16) {
-                inputs[1].value = inputs[1].value.slice(0,16);
+            cardNumArr = e.value;
+            cardNumber.textContent = cardNumArr.slice(0,4) + " " + cardNumArr.slice(4,8) + " " + cardNumArr.slice(8,12) + " " + cardNumArr.slice(12,16);
+            if(e.value.length > 16) {
+                cardNumArr = e.value.substring(0, 16);
+                cardNumber.textContent = cardNumArr.slice(0,4) + " " + cardNumArr.slice(4,8) + " " + cardNumArr.slice(8,12) + " " + cardNumArr.slice(12,16);
+                e.value = e.value.substring(0, 16);
             }
         }
         if (e == inputs[2] && e.value == "") {
             console.log("Trafiłeś mnie, ale jestem pusty");
             expDateM.textContent = "00/";
-        } else if (e == inputs[2] && e.value <= 9){
-            expDateM.textContent = "0" +e.value + "/";
+        } else if (e == inputs[2] && e.value <= 9 && e.value > 0){
+            expDateM.textContent = "0" + e.value.substring(0,2) + "/";
         } else if (e == inputs[2]) {
-            expDateM.textContent = e.value + "/";
-            
+            expDateM.textContent = e.value.substring(0,2) + "/";
+            e.value = e.value.substring(0, 2);
         }
         if (e == inputs[3] && e.value == "") {
             console.log("Trafiłeś mnie, ale jestem pusty");
             expDateY.textContent = "00";
-        } else if (e == inputs[3] && e.value <=9 ){
-            expDateY.textContent = "0" + e.value;
+        } else if (e == inputs[3] && e.value <=9 && e.value > 0){
+            expDateY.textContent = "0" + e.value.substring(0,2);
         } else if (e == inputs[3]){
-            expDateY.textContent = e.value;
-
+            expDateY.textContent = e.value.substring(0,2);
+            e.value = e.value.substring(0, 2);
         }
         if (e == inputs[4] && e.value == "") {
             console.log("Trafiłeś mnie, ale jestem pusty");
             cvcNum.textContent = "000";
-        } else if (e == inputs[4] && e.value <= 9){
-            cvcNum.textContent = "00" + e.value;
+        } else if (e == inputs[4] && e.value <= 9 && e.value > 0){
+            cvcNum.textContent = "00" + e.value.substring(0,3);
         } 
-         else if (e == inputs[4] && e.value <= 99){
-            cvcNum.textContent = "0" + e.value;
+         else if (e == inputs[4] && e.value <= 99 && e.value > 0){
+            cvcNum.textContent = "0" + e.value.substring(0,3);
          
         } else if (e == inputs[4]){
-            cvcNum.textContent = e.value;
+            cvcNum.textContent = e.value.substring(0,3);
+            e.value = e.value.substring(0, 3);
         } 
     })
 })
