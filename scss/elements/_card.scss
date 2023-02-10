@@ -1,11 +1,90 @@
-.card {
-    background-image: url(../../assets/bg-main-mobile.png);
-    background-size: cover;
-    .card__front {
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+    main {
+        width: 100%;
+        .card {
+            width: 100%;
+            background-image: url(../assets/bg-main-mobile.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 30vh;
+            position: relative;
 
+            .card__front {
+                position: absolute;
+                z-index: 2;
+                bottom: -4.5rem;
+                left: 2rem;
+                width: 29rem;
+                height: 16rem;
+                background-image: url(../assets/bg-card-front.png);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                padding: 3rem 2rem 2rem;
+
+            .svgBox {
+                width: 6rem;
+                height: 3rem;      
+                background-image: url(../assets/card-logo.svg);
+                background-size: contain;
+                background-repeat: no-repeat; 
+                margin-bottom: 2rem;
+            }
+            .card__front-number {
+                color: map-get($colors, card-text-color );
+                font-size: 1.8rem;
+                font-weight: 500;
+                letter-spacing: .2rem;
+                margin-bottom: 2rem;
+            }
+            .card__front-data {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                color: map-get($colors, card-text-color );
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+    }   
+
+            .card__back {
+                width: 29rem;
+                height: 16rem;
+                background-image: url(../assets/bg-card-back.png);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 3rem;
+                right: 2rem;
+                padding-right: 4rem;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                .card__back-cvc {
+                    font-size: .9rem;
+                    color: map-get($colors, card-text-color );
+        }
+    }
+    
+}
+.form {
+    margin-top: 10rem;
+    .cardDataWrapper {
+        display: flex;
+        flex-direction: column;
+        label {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
-
 
 .cardDataThanks{
     display: none;
@@ -13,4 +92,6 @@
 
 .error {
     display: none;
+}
+}
 }

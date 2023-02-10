@@ -10,11 +10,94 @@ html {
   font-family: "Space Grotesk", sans-serif;
 }
 
-.cardDataThanks {
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+body main {
+  width: 100%;
+}
+body main .card {
+  width: 100%;
+  background-image: url(../assets/bg-main-mobile.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 30vh;
+  position: relative;
+}
+body main .card .card__front {
+  position: absolute;
+  z-index: 2;
+  bottom: -4.5rem;
+  left: 2rem;
+  width: 29rem;
+  height: 16rem;
+  background-image: url(../assets/bg-card-front.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 3rem 2rem 2rem;
+}
+body main .card .card__front .svgBox {
+  width: 6rem;
+  height: 3rem;
+  background-image: url(../assets/card-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+}
+body main .card .card__front .card__front-number {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+}
+body main .card .card__front .card__front-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+body main .card .card__back {
+  width: 29rem;
+  height: 16rem;
+  background-image: url(../assets/bg-card-back.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  padding-right: 4rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+body main .card .card__back .card__back-cvc {
+  font-size: 0.9rem;
+  color: hsl(0deg, 0%, 100%);
+}
+body main .form {
+  margin-top: 10rem;
+}
+body main .form .cardDataWrapper {
+  display: flex;
+  flex-direction: column;
+}
+body main .form .cardDataWrapper label {
+  display: flex;
+  flex-direction: column;
+}
+body main .cardDataThanks {
   display: none;
 }
-
-.error {
+body main .error {
   display: none;
 }
 
