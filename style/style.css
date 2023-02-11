@@ -84,21 +84,106 @@ body main .card .card__back .card__back-cvc {
   color: hsl(0deg, 0%, 100%);
 }
 body main .form {
-  margin-top: 10rem;
+  margin: 10rem 2.5rem;
 }
 body main .form .cardDataWrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 body main .form .cardDataWrapper label {
+  position: relative;
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+}
+body main .form .cardDataWrapper label input {
+  margin-top: 1rem;
+  height: 4.5rem;
+  padding-left: 1.5rem;
+  border-radius: 1rem;
+  border: 0.1rem solid hsl(270deg, 3%, 87%);
+}
+body main .form .cardDataWrapper label input::placeholder {
+  font-size: 1.8rem;
+  color: hsl(279deg, 6%, 55%);
+  font-weight: 500;
+}
+body main .form .cardDataWrapper label input::-webkit-outer-spin-button, body main .form .cardDataWrapper label input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+body main .form .cardDataWrapper label input[type=number] {
+  -moz-appearance: textfield;
+}
+body main .form .cardDataWrapper label input:focus {
+  outline: none;
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) border-box;
+  border-radius: 1rem;
+  border: 0.1rem solid transparent;
+}
+body main .form .cardDataWrapper .dateCvcWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body main .form .cardDataWrapper .dateCvcWrapper .cardDate {
+  width: 49%;
+}
+body main .form .cardDataWrapper .dateCvcWrapper .cardDate label {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body main .form .cardDataWrapper .dateCvcWrapper .cardDate label input {
+  width: 48%;
+}
+body main .form .cardDataWrapper .dateCvcWrapper .cardCvc {
+  width: 49%;
+}
+body main .form .styledBtn {
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 1.5rem 0;
+  border-radius: 1rem;
+  text-transform: capitalize;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(278deg, 68%, 11%);
+  border: none;
+}
+body main .form .error {
+  display: none;
+  position: absolute;
+  bottom: -2rem;
+  font-size: 1.2rem;
+  color: hsl(0deg, 100%, 66%);
+  text-transform: none;
+  letter-spacing: normal;
 }
 body main .cardDataThanks {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-body main .error {
-  display: none;
+body main .cardDataThanks svg {
+  margin-bottom: 3.5rem;
+}
+body main .cardDataThanks h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: hsl(278deg, 68%, 11%);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+body main .cardDataThanks p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: hsl(279deg, 6%, 55%);
+  margin-bottom: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
