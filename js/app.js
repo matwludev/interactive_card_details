@@ -104,64 +104,124 @@ form.addEventListener("submit", function (e) {
 	if (inputs[0].value == "") {
 		errors[0].style.display = "block";
 		errorsArr[0].push("Empty name");
-		inputs[0].style.borderColor = "red";
+		inputs[0].style.border = ".1rem solid hsl(0, 100%, 66%)";
+	} else {
+		inputs[0].style.border = ".1rem solid hsl(270, 3%, 87%)";
 	}
 	if (inputs[1].value == "") {
 		errors[2].style.display = "block";
 		errorsArr[1].push("Empty number");
-		inputs[1].style.borderColor = "red";
+		inputs[1].style.border = ".1rem solid hsl(0, 100%, 66%)";
+	} else if (
+		inputs[1].value != "" &&
+		inputs[1].value.length == 16 &&
+		!regExp.test(inputs[1].value)
+	) {
+		inputs[1].style.border = ".1rem solid hsl(270, 3%, 87%)";
 	}
 	if (inputs[1].value != "" && inputs[1].value.length < 16) {
 		errors[3].style.display = "block";
 		errorsArr[2].push("Short number");
-		inputs[1].style.borderColor = "red";
+		inputs[1].style.border = ".1rem solid hsl(0, 100%, 66%)";
+	} else if (
+		inputs[1].value != "" &&
+		inputs[1].value.length == 16 &&
+		!regExp.test(inputs[1].value)
+	) {
+		inputs[1].style.border = ".1rem solid hsl(270, 3%, 87%)";
 	}
 	if (inputs[1].value != "" && regExp.test(inputs[1].value)) {
 		errors[1].style.display = "block";
 		errorsArr[3].push("Letters");
-		inputs[1].style.borderColor = "red";
+		inputs[1].style.border = ".1rem solid hsl(0, 100%, 66%)";
+	} else if (
+		inputs[1].value != "" &&
+		inputs[1].value.length == 16 &&
+		regExp.test(inputs[1].value) == false
+	) {
+		inputs[1].style.border = ".1rem solid hsl(270, 3%, 87%)";
 	}
-	if (inputs[3].value == "" && inputs[2].value == "") {
+	if (
+		(inputs[3].value == "" ||
+			inputs[3].value < 0 ||
+			regExp.test(inputs[3].value)) &&
+		(inputs[2].value == "" ||
+			inputs[2].value > 12 ||
+			inputs[2].value < 1 ||
+			regExp.test(inputs[2].value))
+	) {
 		errors[4].style.display = "block";
 		errors[5].style.display = "none";
 		errors[6].style.display = "none";
 		errorsArr[4].push("Empty Year, Wrong Month");
-		inputs[2].style.borderColor = "red";
-		inputs[3].style.borderColor = "red";
+		inputs[2].style.border = ".1rem solid hsl(0, 100%, 66%)";
+		inputs[3].style.border = ".1rem solid hsl(0, 100%, 66%)";
+	} else if (
+		inputs[3].value != "" &&
+		inputs[2].value != "" &&
+		inputs[2].value <= 12 &&
+		inputs[2].value >= 1
+	) {
+		inputs[2].style.border = ".1rem solid hsl(270, 3%, 87%)";
+		inputs[3].style.border = ".1rem solid hsl(270, 3%, 87%)";
 	}
-	if (inputs[2].value == "" && inputs[3].value != "") {
+	if (
+		(inputs[2].value == "" ||
+			inputs[2].value > 12 ||
+			inputs[2].value < 1 ||
+			regExp.test(inputs[2].value)) &&
+		inputs[3].value != ""
+	) {
 		errors[4].style.display = "block";
 		errors[5].style.display = "none";
 		errors[6].style.display = "none";
 		errorsArr[5].push("Month");
-		inputs[2].style.borderColor = "red";
+		inputs[2].style.border = ".1rem solid hsl(0, 100%, 66%)";
+	} else if (
+		inputs[2].value != "" &&
+		inputs[2].value <= 12 &&
+		inputs[2].value >= 1
+	) {
+		inputs[2].style.border = ".1rem solid hsl(270, 3%, 87%)";
 	}
-	if (inputs[3].value == "" && inputs[2].value != "") {
+	if (
+		(inputs[3].value == "" ||
+			inputs[3].value < 0 ||
+			regExp.test(inputs[3].value)) &&
+		inputs[2].value != ""
+	) {
 		errors[4].style.display = "block";
 		errors[5].style.display = "none";
 		errors[6].style.display = "none";
 		errorsArr[6].push("Year");
-		inputs[3].style.borderColor = "red";
+		inputs[3].style.border = ".1rem solid hsl(0, 100%, 66%)";
+	} else if (inputs[3].value != "") {
+		inputs[3].style.border = ".1rem solid hsl(270, 3%, 87%)";
 	}
-	if (inputs[3].value == "" && inputs[2].value > 12) {
-		errors[6].style.display = "block";
-		errors[5].style.display = "none";
-		errors[4].style.display = "none";
-		errorsArr[7].push("Empty Year, Wrong Month");
-		inputs[2].style.borderColor = "red";
-		inputs[3].style.borderColor = "red";
-	}
-	if (inputs[2].value > 12 && inputs[3].value != "") {
+	if (
+		(inputs[2].value > 12 ||
+			inputs[2].value < 1 ||
+			regExp.test(inputs[2].value)) &&
+		inputs[3].value != ""
+	) {
 		errors[5].style.display = "block";
 		errors[4].style.display = "none";
 		errors[6].style.display = "none";
 		errorsArr[5].push("Month");
-		inputs[2].style.borderColor = "red";
+		inputs[2].style.border = ".1rem solid hsl(0, 100%, 66%)";
+	} else if (
+		inputs[2].value != "" &&
+		inputs[2].value <= 12 &&
+		inputs[2].value >= 1
+	) {
+		inputs[2].style.border = ".1rem solid hsl(270, 3%, 87%)";
 	}
 	if (inputs[4].value == "") {
 		errors[7].style.display = "block";
 		errorsArr[8].push("CVC");
-		inputs[4].style.borderColor = "red";
+		inputs[4].style.border = ".1rem solid hsl(0, 100%, 66%)";
+	} else {
+		inputs[4].style.border = ".1rem solid hsl(270, 3%, 87%)";
 	}
 	for (i = 0; i <= errorsArr.length - 1; i++) {
 		if (errorsArr[i].length != 0) {
@@ -172,6 +232,7 @@ form.addEventListener("submit", function (e) {
 		thanksBox.style.display = "flex";
 		form.style.display = "none";
 	}
+	console.log(inputs[1].value);
 });
 
 contBtn.addEventListener("click", () => {
@@ -179,7 +240,7 @@ contBtn.addEventListener("click", () => {
 	form.style.display = "block";
 	inputs.forEach((e) => {
 		e.value = "";
-		e.style.border = ".1rem solid map-get($colors , input-border-color)";
+		e.style.border = ".1rem solid hsl(270, 3%, 87%)";
 	});
 	cardOwner.textContent = "Jane Appleseed";
 	cardNumber.textContent = "0000 0000 0000 0000";
