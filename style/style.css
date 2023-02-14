@@ -11,22 +11,48 @@ html {
 }
 
 body {
+  margin: 0 auto;
+  max-width: 40rem;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/bg-main-mobile.png);
+  background-size: 100vw 35%;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url(../assets/bg-main-desktop.png);
+    background-size: 30% 100vh;
+    max-width: 100rem;
+  }
 }
 body main {
+  position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 1440px) {
+  body main {
+    flex-direction: row;
+    margin-top: 20rem;
+  }
 }
 body main .card {
   width: 100%;
-  background-image: url(../assets/bg-main-mobile.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 30vh;
+  min-height: 25rem;
   position: relative;
+}
+@media screen and (min-width: 1440px) {
+  body main .card {
+    min-height: 55rem;
+  }
 }
 body main .card .card__front {
   position: absolute;
@@ -40,6 +66,14 @@ body main .card .card__front {
   background-repeat: no-repeat;
   padding: 3rem 2rem 2rem;
 }
+@media screen and (min-width: 1440px) {
+  body main .card .card__front {
+    width: 45rem;
+    height: 25rem;
+    top: 0;
+    left: -5rem;
+  }
+}
 body main .card .card__front .svgBox {
   width: 6rem;
   height: 3rem;
@@ -48,12 +82,25 @@ body main .card .card__front .svgBox {
   background-repeat: no-repeat;
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 1440px) {
+  body main .card .card__front .svgBox {
+    width: 8.5rem;
+    height: 5rem;
+    margin-bottom: 6rem;
+  }
+}
 body main .card .card__front .card__front-number {
   color: hsl(0deg, 0%, 100%);
   font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 1440px) {
+  body main .card .card__front .card__front-number {
+    font-size: 2.8rem;
+    letter-spacing: 0.3rem;
+  }
 }
 body main .card .card__front .card__front-data {
   display: flex;
@@ -62,6 +109,11 @@ body main .card .card__front .card__front-data {
   color: hsl(0deg, 0%, 100%);
   font-size: 1.2rem;
   font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  body main .card .card__front .card__front-data {
+    font-size: 1.4rem;
+  }
 }
 body main .card .card__back {
   width: 29rem;
@@ -79,9 +131,24 @@ body main .card .card__back {
   justify-content: center;
   align-items: flex-end;
 }
+@media screen and (min-width: 1440px) {
+  body main .card .card__back {
+    width: 45rem;
+    height: 25rem;
+    top: inherit;
+    right: 5rem;
+    bottom: 0;
+    padding-right: 5rem;
+  }
+}
 body main .card .card__back .card__back-cvc {
   font-size: 0.9rem;
   color: hsl(0deg, 0%, 100%);
+}
+@media screen and (min-width: 1440px) {
+  body main .card .card__back .card__back-cvc {
+    font-size: 1.4rem;
+  }
 }
 body main .form {
   margin: 10rem 2.5rem;
@@ -122,7 +189,7 @@ body main .form .cardDataWrapper label input:focus {
   outline: none;
   background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) border-box;
   border-radius: 1rem;
-  border: 0.1rem solid transparent;
+  border: 0.2rem solid transparent;
 }
 body main .form .cardDataWrapper .dateCvcWrapper {
   display: flex;
@@ -136,6 +203,9 @@ body main .form .cardDataWrapper .dateCvcWrapper .cardDate label {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+body main .form .cardDataWrapper .dateCvcWrapper .cardDate label div {
+  width: 100%;
 }
 body main .form .cardDataWrapper .dateCvcWrapper .cardDate label input {
   width: 48%;
