@@ -42,26 +42,29 @@
 									type="text"
 									placeholder="e.g. 1234 5678 9123 0000"
 								/>
-								<p class="error">Wrong format, numbers only</p>
 								<p class="error">Can't be blank</p>
-								<p class="error">Wrong format, not enough digits</p></label
+								<p class="error">
+									Wrong format, numbers only, must contain 16 digits
+								</p></label
 							>
 						</div>
 						<div class="dateCvcWrapper">
 							<div class="cardDate">
 								<label
 									>exp. date (mm/yy)
-									<input id="expDateMM" type="number" placeholder="MM" />
-									<input id="expDateYY" type="number" placeholder="YY" />
-									<p class="error">Can't be blank</p>
-									<p class="error">Wrong month</p>
-									<p class="error">Wrong month, empty year</p>
+									<div>
+										<input id="expDateMM" type="text" placeholder="MM" />
+										<input id="expDateYY" type="text" placeholder="YY" />
+										<p class="error">Can't be blank</p>
+										<p class="error">Wrong format of date</p>
+									</div>
 								</label>
 							</div>
 							<div class="cardCvc">
 								<label
-									>cvc<input id="cvcNum" type="number" placeholder="e.g. 123" />
-									<p class="error">Can't be blank</p></label
+									>cvc<input id="cvcNum" type="text" placeholder="e.g. 123" />
+									<p class="error">Can't be blank</p>
+									<p class="error">Wrong format</p></label
 								>
 							</div>
 						</div>
