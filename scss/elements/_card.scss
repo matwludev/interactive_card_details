@@ -31,12 +31,12 @@ body {
             margin-top: 20rem;
         }
         .card {
-            width: 100%;
+            width: 50%;
             min-height: 25rem;
             position: relative;
 
             @include desktop {
-                min-height: 55rem;
+                min-height: 55rem; 
             }
 
             .card__front {
@@ -135,6 +135,7 @@ body {
 }
 .form {
     margin: 10rem 2.5rem;
+    width: 50%;
     
     .cardDataWrapper {
         display: flex;
