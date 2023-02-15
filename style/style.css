@@ -45,7 +45,7 @@ body main {
   }
 }
 body main .card {
-  width: 100%;
+  width: 50%;
   min-height: 25rem;
   position: relative;
 }
@@ -152,6 +152,7 @@ body main .card .card__back .card__back-cvc {
 }
 body main .form {
   margin: 10rem 2.5rem;
+  width: 50%;
 }
 body main .form .cardDataWrapper {
   display: flex;
